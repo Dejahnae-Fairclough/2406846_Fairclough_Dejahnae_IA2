@@ -1,0 +1,132 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Register for Coding Conf 2026.">
+    <title>Coding Conf 2026 | Registration</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+    <!-- Website header -->
+    <header class="site-header">
+        <a class="brand" href="index.html">
+            <img src="../assets/logo.svg" alt="Coding Conf logo">
+            <span>Coding Conf 2026</span>
+        </a>
+
+        <nav aria-label="Main navigation">
+            <a href="index.html">Home</a>
+            <a href="login.html" aria-current="page">Register</a>
+        </nav>
+    </header>
+
+    <!-- Registration page -->
+    <main>
+
+        <section class="panel form-panel">
+
+            <p class="eyebrow">You're invited</p>
+
+            <h1>Get your <span>ticket!</span></h1>
+
+            <p class="form-intro">
+                Fill in your details below to register for Coding Conf 2026.
+                Your personalized ticket will be created after registration.
+            </p>
+
+            <!-- Registration form -->
+            <form id="registrationForm" novalidate>
+
+                <!-- Full name -->
+                <div class="field">
+                    <label for="fullName">Full Name</label>
+
+                    <input type="text"
+                           id="fullName"
+                           name="fullName"
+                           placeholder="Enter your full name"
+                           autocomplete="name"
+                           aria-describedby="nameError"
+                           required>
+
+                    <p class="error" id="nameError" aria-live="polite"></p>
+                </div>
+
+                <!-- Email address -->
+                <div class="field">
+                    <label for="email">Email Address</label>
+
+                    <input type="email"
+                           id="email"
+                           name="email"
+                           placeholder="example@email.com"
+                           autocomplete="email"
+                           aria-describedby="emailError"
+                           required>
+
+                    <p class="error" id="emailError" aria-live="polite"></p>
+                </div>
+
+                <!-- GitHub username -->
+                <div class="field">
+                    <label for="github">GitHub Username</label>
+
+                    <input type="text"
+                           id="github"
+                           name="github"
+                           placeholder="@username"
+                           aria-describedby="githubError"
+                           required>
+
+                    <p class="error" id="githubError" aria-live="polite"></p>
+                </div>
+
+                <!-- Profile picture upload -->
+                <div class="field">
+                    <label for="avatar">Upload Your Profile Picture</label>
+
+                    <p class="field-help">
+                        Choose a JPG or PNG image smaller than 500KB.
+                    </p>
+
+                    <input type="file"
+                           id="avatar"
+                           name="avatar"
+                           accept=".jpg,.jpeg,.png,image/jpeg,image/png"
+                           aria-describedby="avatarError"
+                           required>
+
+                    <p class="error" id="avatarError" aria-live="polite"></p>
+                </div>
+
+                <!-- Submit button -->
+                <button type="submit" class="button submit-button">
+                    Generate My Ticket
+                </button>
+
+                <p class="error general-error" id="generalError" aria-live="polite"></p>
+
+            </form>
+
+            <p class="back-link">
+                <a href="index.html">← Back to home</a>
+            </p>
+
+        </section>
+
+    </main>
+
+    <!-- Form validation JavaScript -->
+    <script src="../js/validation.js"></script>
+
+    <!-- Website footer -->
+    <footer>
+        <p>Coding Conf 2026 | CIT2011 IA#2</p>
+    </footer>
+
+</body>
+</html>

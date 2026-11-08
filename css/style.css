@@ -1,0 +1,619 @@
+﻿/* Dejahnae Fairclough - Coding Conf 2026 stylesheet */
+
+/* Main website colours */
+:root {
+    --background: #30283a;
+    --background-light: #3b3047;
+    --panel: #443750;
+    --pink: #c6a6c9;
+    --light-pink: #55445e;
+    --lavender: #b9a3cc;
+    --cream: #e4d9e8;
+    --white: #f5edf7;
+    --text: #f0e8f3;
+    --muted: #c2b5ca;
+    --error: #e6a0b0;
+    --border: #66536f;
+    --sage: #aeb9ad;
+}
+
+/* Apply consistent sizing */
+* {
+    box-sizing: border-box;
+}
+
+/* Main page background */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--background);
+    color: var(--text);
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+/* Header */
+.site-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 18px 6%;
+    border-bottom: 1px solid var(--border);
+    background-color: #392e44;
+}
+
+/* Website logo and name */
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: var(--text);
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.brand img {
+    width: 42px;
+    height: 42px;
+    object-fit: contain;
+}
+
+/* Navigation */
+nav {
+    display: flex;
+    gap: 22px;
+}
+
+nav a {
+    color: var(--text);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover,
+nav a[aria-current="page"] {
+    color: #d4b8df;
+    text-decoration: underline;
+}
+
+/* Main content area */
+main {
+    width: min(92%, 1000px);
+    margin: 35px auto;
+}
+
+/* General panels */
+.panel {
+    background-color: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 25px;
+    margin-bottom: 20px;
+    box-shadow: 0 3px 8px rgba(15, 8, 22, 0.15);
+}
+
+/* Small section labels */
+.eyebrow {
+    margin: 0 0 10px;
+    color: #d0afd9;
+    font-size: 0.8rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+/* Main headings */
+h1,
+h2,
+h3,
+p {
+    overflow-wrap: anywhere;
+}
+
+h1 {
+    margin: 0 0 18px;
+    font-size: clamp(2rem, 5vw, 3.4rem);
+    line-height: 1.2;
+    color: #f2e8f5;
+}
+
+h1 span {
+    color: #d0afd9;
+}
+
+h2 {
+    margin-top: 0;
+    color: #d0b7df;
+    font-size: clamp(1.5rem, 3vw, 2rem);
+}
+
+h3 {
+    color: #d0afd9;
+}
+
+/* Welcome section */
+.hero {
+    position: relative;
+    padding-top: 45px;
+    padding-bottom: 45px;
+    overflow: hidden;
+    background-color: #42364e;
+}
+
+.hero::after {
+    content: "";
+    position: absolute;
+    width: 135px;
+    height: 135px;
+    right: -40px;
+    top: -40px;
+    border-radius: 50%;
+    background-color: #665273;
+    opacity: 0.55;
+    pointer-events: none;
+}
+
+.hero-description {
+    max-width: 650px;
+    color: var(--muted);
+    font-size: 1.05rem;
+}
+
+/* Event information */
+.event-info {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 35px;
+    margin: 28px 0;
+}
+
+.event-info div {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.info-label {
+    color: #d0afd9;
+    font-size: 0.75rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.event-info strong {
+    color: var(--text);
+}
+
+/* Buttons */
+button,
+.btn {
+    display: inline-block;
+    background-color: #bba2ca;
+    color: #30283a;
+    border: 1px solid #c9afd4;
+    border-radius: 8px;
+    padding: 11px 20px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+button:hover,
+.btn:hover {
+    background-color: #d0b7df;
+    border-color: #d8c1e2;
+}
+
+.button-light {
+    background-color: #574660;
+    color: var(--text);
+    border-color: var(--border);
+}
+
+/* Conference topic cards */
+.topics {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 16px;
+}
+
+.topic-card {
+    padding: 20px;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    background-color: #51415d;
+}
+
+.topic-card:nth-child(2) {
+    background-color: #57404f;
+}
+
+.topic-card:nth-child(3) {
+    background-color: #414b4a;
+}
+
+.topic-card:hover {
+    border-color: #c9afd4;
+}
+
+.topic-number {
+    display: inline-block;
+    margin-bottom: 8px;
+    color: #d0afd9;
+    font-size: 0.85rem;
+    font-weight: bold;
+}
+
+.topic-card h3 {
+    margin: 0 0 8px;
+}
+
+.topic-card p {
+    margin-bottom: 0;
+    color: var(--muted);
+}
+
+/* Event details */
+.details-table {
+    border-top: 1px solid var(--border);
+}
+
+.detail-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    padding: 15px 5px;
+    border-bottom: 1px solid var(--border);
+}
+
+.detail-row strong {
+    color: #d0afd9;
+}
+
+.detail-row span {
+    color: var(--text);
+    text-align: right;
+}
+
+/* Closing invitation */
+.closing-panel {
+    padding: 32px 20px;
+    margin-bottom: 28px;
+    border: 1px solid #665273;
+    border-radius: 14px;
+    text-align: center;
+    color: var(--text);
+    background-color: #4a3a56;
+}
+
+.closing-panel h2 {
+    margin-bottom: 8px;
+    color: #ddc5e5;
+}
+
+.closing-panel p {
+    margin-top: 0;
+    color: var(--muted);
+}
+
+/* Registration form panel */
+.form-panel {
+    max-width: 650px;
+    margin: 0 auto 28px;
+}
+
+.form-intro {
+    margin-bottom: 25px;
+    color: var(--muted);
+}
+
+/* Form fields */
+.field {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 7px;
+    color: #ddc5e5;
+    font-weight: bold;
+}
+
+.field-help {
+    margin: 0 0 9px;
+    color: var(--muted);
+    font-size: 0.9rem;
+}
+
+/* Text and file inputs */
+input {
+    width: 100%;
+    min-height: 45px;
+    padding: 11px;
+    border: 1px solid #76627f;
+    border-radius: 8px;
+    background-color: #352b40;
+    color: var(--text);
+    font: inherit;
+}
+
+input:focus {
+    outline: 2px solid #b9a3cc;
+    border-color: #c9afd4;
+}
+
+input::placeholder {
+    color: #b5a7bd;
+}
+
+input[type="file"] {
+    padding: 10px;
+}
+
+input[type="file"]::file-selector-button {
+    padding: 8px 12px;
+    margin-right: 10px;
+    border: 0;
+    border-radius: 7px;
+    background-color: #b9a3cc;
+    color: #30283a;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Form button */
+.submit-button {
+    width: 100%;
+    margin-top: 5px;
+}
+
+/* Error messages */
+.error {
+    min-height: 1.2em;
+    margin: 5px 0 0;
+    color: var(--error);
+    font-size: 0.88rem;
+}
+
+.general-error {
+    text-align: center;
+}
+
+.back-link {
+    margin-bottom: 0;
+    text-align: center;
+}
+
+.back-link a {
+    color: #d0afd9;
+}
+
+/* Ticket confirmation */
+.confirmation {
+    text-align: center;
+}
+
+.confirmation-text {
+    color: var(--muted);
+}
+
+/* Ticket design */
+.ticket {
+    position: relative;
+    max-width: 600px;
+    margin: 32px auto;
+    padding: 25px;
+    overflow: hidden;
+    border: 2px dashed #b9a3cc;
+    border-radius: 15px;
+    color: var(--text);
+    text-align: left;
+    background-color: #51415d;
+    box-shadow: 0 3px 10px rgba(15, 8, 22, 0.2);
+}
+
+/* Ticket heading */
+.ticket-top {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 15px;
+    padding-bottom: 20px;
+    border-bottom: 1px dashed #b9a3cc;
+}
+
+.ticket-brand {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.ticket-brand img {
+    width: 55px;
+    height: 55px;
+    object-fit: contain;
+}
+
+.ticket-brand h2 {
+    margin: 0;
+    color: #e4d1ec;
+    font-size: 1.5rem;
+}
+
+.ticket-brand p {
+    margin: 2px 0;
+    color: #d0afd9;
+    font-size: 0.9rem;
+}
+
+.ticket-tag {
+    padding: 6px 12px;
+    border: 1px solid #806c8b;
+    border-radius: 20px;
+    background-color: #62516c;
+    color: #eadcf0;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+/* Attendee information */
+.attendee {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    padding: 25px 0;
+}
+
+.attendee img {
+    width: 95px;
+    height: 95px;
+    flex-shrink: 0;
+    border: 3px solid #b9a3cc;
+    border-radius: 12px;
+    object-fit: cover;
+}
+
+.attendee-label {
+    margin: 0;
+    color: #d0afd9;
+    font-size: 0.75rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.attendee-details h3 {
+    margin: 4px 0;
+    color: #f2e8f5;
+    font-size: 1.35rem;
+}
+
+.attendee-details a {
+    color: #ddc5e5;
+    overflow-wrap: anywhere;
+}
+
+/* Ticket number */
+.ticket-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    padding-top: 15px;
+    border-top: 1px dashed #b9a3cc;
+    color: var(--muted);
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+}
+
+.ticket-bottom strong {
+    color: #e4d1ec;
+    font-size: 1.15rem;
+}
+
+/* Footer */
+footer {
+    padding: 18px 15px;
+    border-top: 1px solid var(--border);
+    color: var(--muted);
+    text-align: center;
+    background-color: #392e44;
+}
+
+footer p {
+    margin: 3px 0;
+    font-size: 0.9rem;
+}
+
+/* Visible keyboard focus */
+:is(a, button, input):focus-visible {
+    outline: 3px solid #c9afd4;
+    outline-offset: 3px;
+}
+
+/* Responsive layout for tablets and phones */
+@media (max-width: 700px) {
+
+    .site-header {
+        flex-direction: column;
+        padding: 18px;
+    }
+
+    nav {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .topics {
+        grid-template-columns: 1fr;
+    }
+
+    main {
+        margin-top: 25px;
+    }
+
+    .event-info {
+        gap: 20px;
+    }
+}
+
+/* Smaller mobile screens */
+@media (max-width: 420px) {
+
+    .brand {
+        font-size: 1rem;
+    }
+
+    .panel {
+        padding: 20px;
+    }
+
+    .detail-row {
+        flex-direction: column;
+        gap: 3px;
+    }
+
+    .detail-row span {
+        text-align: left;
+    }
+
+    .ticket {
+        padding: 17px;
+    }
+
+    .ticket-brand {
+        gap: 8px;
+    }
+
+    .ticket-brand img {
+        width: 42px;
+        height: 42px;
+    }
+
+    .ticket-brand h2 {
+        font-size: 1.2rem;
+    }
+
+    .attendee {
+        gap: 12px;
+    }
+
+    .attendee img {
+        width: 75px;
+        height: 75px;
+    }
+}
+
+/* Respect users who prefer reduced motion */
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+    }
+}
